@@ -1,55 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<title>Hola, que tal {{nombre}}</title>
-<meta charset="utf-8" />
+    <title>Descripción de los endpoints</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .endpoint {
+            margin-bottom: 20px;
+        }
+        .method {
+            font-weight: bold;
+        }
+    </style>
 </head>
- 
+<body>
+    <h1>Descripción de los endpoints</h1>
 
+    <div class="endpoint">
+        <p class="method">GET</p>
+        <p>Descripción del primer endpoint...</p>
+        <p>Ejemplo de uso: /api/endpoint1</p>
+    </div>
 
+    <div class="endpoint">
+        <p class="method">POST</p>
+        <p>Descripción del segundo endpoint...</p>
+        <p>Ejemplo de uso: /api/endpoint2</p>
+    </div>
 
-
-
-<form id = "myForm"  action="/v0/predictor" method="POST">
-  <table>
-    <tr>
-      <td><label for="s_length">Sepal Length:</label><br></td>
-      <td> <input type="number" step="0.01" id="s_length" name="s_length"><br> </td>
-      <td><label for="s_width">Sepal Width:</label><br> </td>
-      <td><input type="number" step="0.01" id="s_width" name="s_width"><br></td>
-      <td><label for="p_length">Petal Length:</label><br></td>
-      <td><input type="number" step="0.01" id="p_length" name="p_length"><br></td>
-      <td><label for="p_width">Petal Width:</label><br></td>
-      <td><input type="number" step="0.01" id="p_width" name="p_width"><br></td>
-    </tr>
-    <tr>
-      <td colspan="8"><input type="submit" value="Submit"></td>
-    </tr>
-  </table>
-</form>
-
-
-<p id="error"></p>
-
-<script>
-document.getElementById("myForm").onsubmit = function() {
-  var sLength = document.getElementById("s_length").value;
-  var sWidth = document.getElementById("s_width").value;
-  var pLength = document.getElementById("p_length").value;
-  var pWidth = document.getElementById("p_width").value;
-
-  if (sLength === "" || sWidth === "" || pLength === "" || pWidth === "") {
-    document.getElementById("error").innerHTML = "Please fill all the fields.";
-    return false;
-  } else if (isNaN(sLength) || isNaN(sWidth) || isNaN(pLength) || isNaN(pWidth)) {
-    document.getElementById("error").innerHTML = "Please enter only numbers.";
-    return false;
-  } else {
-    document.getElementById("error").innerHTML = "";
-    return true;
-  }
-};
-</script>
+    <div class="endpoint">
+        <p class="method">GET</p>
+        <p>Descripción del tercer endpoint...</p>
+        <p>Ejemplo de uso: /api/endpoint3</p>
+    </div>
 
 </body>
 </html>

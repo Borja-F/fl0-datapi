@@ -16,7 +16,7 @@ app = Flask(__name__)
 
 
 
-@app.route('/hola', methods= ["GET"])
+@app.route('/', methods= ["GET"])
 def saluda():
     
     return render_template("plantilla.html")  
